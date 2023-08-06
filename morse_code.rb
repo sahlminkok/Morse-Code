@@ -38,11 +38,11 @@ def decode(morse_code)
     "----." => "9",
   }
 
-  morse_code_words = morse_code.split("   ")  # Split into words
+  morse_code_words = morse_code.split("   ") # Split into words
   decoded_message = []
 
   morse_code_words.each do |word|
-    morse_code_letters = word.split(" ")  # Split into letters
+    morse_code_letters = word.split(" ") # Split into letters
     decoded_word = morse_code_letters.map { |morse| morse_code_library[morse] }.join("")
     decoded_message << decoded_word
   end
